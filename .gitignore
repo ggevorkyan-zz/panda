@@ -1,0 +1,7 @@
+# ignore all dotfiles except gitignore
+.*
+!.gitignore
+
+# ignore target folder
+/target
+
