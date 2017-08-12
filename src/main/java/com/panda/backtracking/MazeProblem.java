@@ -1,29 +1,15 @@
 package com.panda.backtracking;
 
+import com.panda.util.ArrayUtils;
+
 public class MazeProblem {
 
-	private char[][] maze = { 
-			{ '-', '-', '-', '-', '-', '#', '-', '-', '-', '-' }, // 0
-			{ '-', '-', '-', '-', '-', '#', '-', '-', '#', '-' }, // 1
-			{ '-', '-', '#', '#', '#', '#', '#', '-', '#', '-' }, // 2
-			{ '-', '-', '#', '-', '-', '-', '#', '-', '#', '-' }, // 3
-			{ '-', '-', '#', '-', '#', '-', '#', '-', '#', '-' }, // 4
-			{ '-', '-', '#', '-', '#', '-', '-', '-', '#', '-' }, // 5
-			{ '-', '-', '#', '-', '#', '#', '#', '#', '#', '-' }, // 6
-			{ '-', '-', '#', '-', '-', '-', '-', '-', '#', '-' }, // 7
-			{ '-', '-', '#', '#', '#', '#', '-', '#', '#', '-' }, // 8
-			{ '-', '-', '-', '-', '-', '-', '-', '#', '#', '-' }  // 9
-	};
-
-	private void printMaze() {
-		for (int i = 0; i < maze.length; i++) {
-			for (int j = 0; j < maze.length; j++) {
-				System.out.print(maze[i][j]);
-			}
-			System.out.println();
-		}
+	private Character[][] maze;
+	
+	public MazeProblem(Character[][] maze) {
+		this.maze = maze;
 	}
-
+	
 	private boolean solveMaze(int i, int j) {
 		maze[i][j] = '*';
 		if (i == maze.length - 1 && j == maze.length - 1) {
@@ -51,7 +37,7 @@ public class MazeProblem {
 
 	public void solve() {
 		if (solveMaze(0, 0)) {
-			printMaze();
+			ArrayUtils.printMatrix(maze);
 		} else {
 			System.out.println("No solution...");
 		}

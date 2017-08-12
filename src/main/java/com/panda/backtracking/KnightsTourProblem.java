@@ -3,7 +3,6 @@ package com.panda.backtracking;
 public class KnightsTourProblem {
 
 	private int BOARD_SIZE = 8;
-	private int NUMBER_OF_MOVES = 8;
 	private int[][] board = new int[BOARD_SIZE][BOARD_SIZE];
 	private int[] xMoves = { 2, 1, -1, -2, -2, -1, 1, 2 };
 	private int[] yMoves = { 1, 2, 2, 1, -1, -2, -2, -1 };
@@ -17,7 +16,7 @@ public class KnightsTourProblem {
 			return true;
 		}
 
-		for (int i = 0; i < NUMBER_OF_MOVES; i++) {
+		for (int i = 0; i < xMoves.length; i++) {
 			int nextX = x + xMoves[i];
 			int nextY = y + yMoves[i];
 			if (isValidStep(nextX, nextY)) {
@@ -30,7 +29,7 @@ public class KnightsTourProblem {
 		}
 		return false;
 	}
-
+	
 	private void printBoard() {
 		for (int i = 0; i < BOARD_SIZE; i++) {
 			for (int j = 0; j < BOARD_SIZE; j++) {

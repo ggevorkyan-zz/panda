@@ -1,9 +1,11 @@
 package com.panda.backtracking;
 
+import com.panda.util.ArrayUtils;
+
 public class EightQueensProblem {
 
 	private static int BOARD_SIZE = 8;
-	private static char[][] board = new char[BOARD_SIZE][BOARD_SIZE];
+	private static Character[][] board = new Character[BOARD_SIZE][BOARD_SIZE];
 
 	public EightQueensProblem() {
 		for (int i = 0; i < BOARD_SIZE; i++) {
@@ -46,18 +48,9 @@ public class EightQueensProblem {
 		return true;
 	}
 
-	private void printBoard() {
-		for (int i = 0; i < BOARD_SIZE; i++) {
-			for (int j = 0; j < BOARD_SIZE; j++) {
-				System.out.print(board[i][j] + " ");
-			}
-			System.out.println();
-		}
-	}
-
 	public void solve() {
 		if (solveEightQueensProblem(0)) {
-			printBoard();
+			ArrayUtils.printMatrix(board);
 		} else {
 			System.out.println("No solution...");
 		}
