@@ -10,10 +10,10 @@ public class GraphColoringProblem {
 
 	private Set<Node> visited = new LinkedHashSet<Node>();
 	private Color[] COLORS = new Color[] { Color.RED, Color.GREEN, Color.BLUE };
-	
+
 	private Node root;
 	private int nodeCount;
-	
+
 	public GraphColoringProblem(Node root, int nodeCount) {
 		this.root = root;
 		this.nodeCount = nodeCount;

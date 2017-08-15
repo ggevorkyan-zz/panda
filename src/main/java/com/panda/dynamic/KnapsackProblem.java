@@ -34,6 +34,16 @@ public class KnapsackProblem {
 			}
 		}
 		ArrayUtils.printMatrix(table);
+		System.out.println();
+		System.out.println("Max value: " + table[itemCount][maxWeight]);
+		System.out.println("Items:");
+		for (int i = itemCount, j = maxWeight; j > 0; i--) {
+			if (table[i][j] != table[i - 1][j]) {
+				j -= weights[i - 1];
+			}
+			System.out.println(i);
+		}
+
 	}
 
 }

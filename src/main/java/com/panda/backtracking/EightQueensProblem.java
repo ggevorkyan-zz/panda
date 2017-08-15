@@ -5,7 +5,7 @@ import com.panda.util.ArrayUtils;
 public class EightQueensProblem {
 
 	private static int BOARD_SIZE = 8;
-	private static Character[][] board = new Character[BOARD_SIZE][BOARD_SIZE];
+	private static char[][] board = new char[BOARD_SIZE][BOARD_SIZE];
 
 	public EightQueensProblem() {
 		for (int i = 0; i < BOARD_SIZE; i++) {

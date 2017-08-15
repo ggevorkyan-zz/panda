@@ -8,5 +8,5 @@ public class KnightsTourProblemTest {
 	public void testSolve() {
 		new KnightsTourProblem().solve();
 	}
-	
+
 }

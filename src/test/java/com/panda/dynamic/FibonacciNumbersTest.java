@@ -3,7 +3,7 @@ package com.panda.dynamic;
 import org.junit.Test;
 
 public class FibonacciNumbersTest {
-	
+
 	@Test
 	public void testFibonacci() {
 		FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();

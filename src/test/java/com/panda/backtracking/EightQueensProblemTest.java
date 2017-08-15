@@ -8,5 +8,5 @@ public class EightQueensProblemTest {
 	public void testSolve() {
 		new EightQueensProblem().solve();
 	}
-	
+
 }

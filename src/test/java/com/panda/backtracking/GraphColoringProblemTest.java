@@ -34,8 +34,8 @@ public class GraphColoringProblemTest {
 		o.edges.add(d);
 		e.edges.add(b);
 		e.edges.add(c);
-		
+
 		new GraphColoringProblem(a, 6).solve();
 	}
-	
+
 }

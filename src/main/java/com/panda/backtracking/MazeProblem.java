@@ -5,11 +5,11 @@ import com.panda.util.ArrayUtils;
 public class MazeProblem {
 
 	private char[][] maze;
-	
+
 	public MazeProblem(char[][] maze) {
 		this.maze = maze;
 	}
-	
+
 	private boolean solveMaze(int i, int j) {
 		maze[i][j] = '*';
 		if (i == maze.length - 1 && j == maze.length - 1) {

@@ -20,7 +20,7 @@ public class Node {
 
 	@Override
 	public boolean equals(Object other) {
-		return this.id.equals(((Node)other).id);
+		return this.id.equals(((Node) other).id);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class SudokuProblem {
 			if (isValid(row, col, num)) {
 				board[row][col] = num;
 				if (solveSudoku(row + 1, col)) {
-					return true;					
+					return true;
 				}
 				board[row][col] = 0;
 			}

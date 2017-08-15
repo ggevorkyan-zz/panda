@@ -29,7 +29,7 @@ public class KnightsTourProblem {
 		}
 		return false;
 	}
-	
+
 	private void printBoard() {
 		for (int i = 0; i < BOARD_SIZE; i++) {
 			for (int j = 0; j < BOARD_SIZE; j++) {
