@@ -4,9 +4,9 @@ import com.panda.util.ArrayUtils;
 
 public class SudokuProblem {
 
-	private Integer[][] board;
+	private int[][] board;
 
-	public SudokuProblem(Integer[][] board) {
+	public SudokuProblem(int[][] board) {
 		this.board = board;
 	}
 

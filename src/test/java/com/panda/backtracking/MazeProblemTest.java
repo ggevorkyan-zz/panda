@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class MazeProblemTest {
 
-	private Character[][] maze = { 
+	private char[][] maze = { 
 			{ '-', '-', '-', '-', '-', '#', '-', '-', '-', '-' }, // 0
 			{ '-', '-', '-', '-', '-', '#', '-', '-', '#', '-' }, // 1
 			{ '-', '-', '#', '#', '#', '#', '#', '-', '#', '-' }, // 2

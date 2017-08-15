@@ -4,9 +4,9 @@ import com.panda.util.ArrayUtils;
 
 public class MazeProblem {
 
-	private Character[][] maze;
+	private char[][] maze;
 	
-	public MazeProblem(Character[][] maze) {
+	public MazeProblem(char[][] maze) {
 		this.maze = maze;
 	}
 	
