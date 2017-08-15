@@ -5,36 +5,36 @@ import com.panda.util.ListNode;
 public class MergeKSortedLists {
 
 	public ListNode solve(ListNode[] lists) {
-		ListNode head = null, cur = null;
-		ListNode[] currentHeads = new ListNode[lists.length];
-		for (int i = 0; i < lists.length; i++) {
-			currentHeads[i] = lists[i];
+		if (lists == null || lists.length == 0) {
+			return null;
 		}
-		for (int k = getNextHead(currentHeads); k < currentHeads.length; k = getNextHead(currentHeads)) {
-			for (int i = 0; i < currentHeads.length; i++) {
-				if (currentHeads[i] != null && currentHeads[i].val < currentHeads[k].val) {
-					k = i;
-				}
+		int last = lists.length - 1;
+		while (last != 0) {
+			int i = 0, j = last;
+			while (i < j) {
+				lists[i] = merge(lists[i], lists[j]);
+				i++;
+				j--;
 			}
-			ListNode n = new ListNode(currentHeads[k].val);
-			if (head == null) {
-				head = n;
-				cur = n;
-			} else {
-				cur.next = n;
-				cur = n;
-			}
-			currentHeads[k] = currentHeads[k].next;
+			last = j;
 		}
-		return head;
+		return lists[0];
 	}
 
-	private int getNextHead(ListNode[] currentHeads) {
-		int k = 0;
-		while (k < currentHeads.length && currentHeads[k] == null) {
-			k++;
+	private ListNode merge(ListNode a, ListNode b) {
+		ListNode res = null;
+		if (a == null)
+			return b;
+		if (b == null)
+			return a;
+		if (a.val < b.val) {
+			res = a;
+			res.next = merge(a.next, b);
+		} else {
+			res = b;
+			res.next = merge(a, b.next);
 		}
-		return k;
+		return res;
 	}
 
 }
